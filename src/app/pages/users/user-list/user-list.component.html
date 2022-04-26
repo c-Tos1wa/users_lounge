@@ -9,20 +9,17 @@
         <tr>
           <th>ID</th>
           <th>Nome</th>
-          <th>Sobrenome</th>
           <th>Idade</th>
           <th>Profissão</th>
           <th colspan="2"></th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr *ngFor="let user of users">
+          <td>{{ user.ID }} </td>
+          <td>{{ user.nome }} {{ user.sobrenome }}</td>
+          <td>{{ user.idade }} </td>
+          <td>{{ user.Profissao }}</td>
           <td>
             <button class="btn btn-primary">Editar</button>
             <button class="btn btn-danger">Excluir</button>
