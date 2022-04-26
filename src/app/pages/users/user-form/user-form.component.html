@@ -1,1 +1,61 @@
-<p>user-form works!</p>
+<div class="card w-100 my-5">
+  <div class="card-body">
+    <h2 class="card-title text-center">Formulário de Usuários</h2>
+      <form>
+        <div class="row my-5">
+          <div class="col-6">
+          <div class="form-floating">
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="name"
+              id="name"
+              placeholder="Digite seu nome"/>
+              <label for="name">Nome</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-floating">
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="lastName"
+              id="lastName"
+              placeholder="Digite seu sobrenome"/>
+              <label for="lastName">Sobrenome</label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+        <div class="col-6">
+          <div class="form-floating">
+            <input 
+            type="text" 
+              class="form-control" 
+              formControlName="age"
+              id="age"
+              placeholder="Digite sua idade"/>
+              <label for="age">Idade</label>
+            </div>
+        </div>
+        <div class="col-6">
+          <div class="form-floating">
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="job"
+            id="job"
+            placeholder="Digite sua profissão"/>
+            <label for="job">Profissao</label>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="form-group col-12 mt-4">
+          <button type="button" class="btn btn-outline-danger float-start">Cancelar</button>
+          <button type="button" class="btn btn-outline-success float-end">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
