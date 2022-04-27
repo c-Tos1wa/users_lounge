@@ -1,7 +1,7 @@
 <div class="card w-100 my-5">
   <div class="card-body">
     <h2 class="card-title text-center">Formulário de Usuários</h2>
-      <form>
+      <form [formGroup]="userForm">
         <div class="row my-5">
           <div class="col-6">
           <div class="form-floating">
@@ -53,7 +53,7 @@
       <div class="row my-3">
         <div class="form-group col-12 mt-4">
           <button type="button" class="btn btn-outline-danger float-start">Cancelar</button>
-          <button type="button" class="btn btn-outline-success float-end">Enviar</button>
+          <button type="button" class="btn btn-outline-success float-end" (click)="addUser()">Enviar</button>
         </div>
       </div>
     </form>
