@@ -1,7 +1,7 @@
 export interface User {
-  ID?: number,
+  ID: number,
   nome: string,
   sobrenome: string,
   idade: number,
-  Profissao: string  
+  profissao: string  
 }

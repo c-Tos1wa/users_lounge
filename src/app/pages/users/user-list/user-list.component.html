@@ -19,10 +19,10 @@
           <td>{{ user.ID }} </td>
           <td>{{ user.nome }} {{ user.sobrenome }}</td>
           <td>{{ user.idade }} </td>
-          <td>{{ user.Profissao }}</td>
+          <td>{{ user.profissao }}</td>
           <td>
-            <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Excluir</button>
+            <button class="btn btn-primary" [routerLink]="['/form', user.ID]">Editar</button>
+            <button class="btn btn-danger" (click)="deleteUser(user.ID)">Excluir</button>
           </td>
         </tr>
       </tbody>

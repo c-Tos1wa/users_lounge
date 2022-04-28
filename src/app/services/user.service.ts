@@ -7,7 +7,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
-  api = 'https://sheet.best/api/sheets/5d92918d-007d-41cf-97c4-8aadbede74b3'
+  api = 'https://sheet.best/api/sheets/393c33a4-8ceb-4b89-a432-46157508fa0e'
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -20,7 +20,19 @@ export class UserService {
     return this.httpClient.get<User[]>(this.api);
   }
 
+  getUser(id: string):Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.api}/ID/${id}`)
+  }
+
   postUser(user: User):Observable<User>{
     return this.httpClient.post<User>(this.api, user, this.httpOptions)
+  }
+
+  updateUser(id: string, user: User):Observable<User>{
+    return this.httpClient.put<User>(`${this.api}/ID/${id}`, user, this.httpOptions)
+  }
+
+  deleteUser(id: number): Observable<User>{
+    return this.httpClient.delete<User>(`${this.api}/ID/${id}`)
   }
 }
